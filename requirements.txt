@@ -3,3 +3,8 @@ pandas==1.5.1
 numpy==1.23.0
 scipy==1.9.3 
 openpyxl==3.0.10
+
+
+#comando para instalação das bibliotecas
+import pip
+pip.main(["install","pandas==1.5.2","numpy==1.23.5","openpyxl==3.0.10","streamlit==1.15.1","scipy==1.9.3"])
