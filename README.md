@@ -7,13 +7,14 @@
 <p>Modelar não é representar a realidade, mas transmitir uma equação útil, então tentamos quantificar as frações possíveis.
 <p>É interessante quanta variação existe no futebol, e essa variação coloca os problemas do jogo nas minúcias. Se pudéssemos repetir o jogo algumas vezes, poderíamos ter vários jogos de diferentes valores.</p>
 <p>Quando se trata de futebol, estamos quantificando todas as incertezas possíveis.</p>
+<a href='https://g1.globo.com/sp/sao-carlos-regiao/noticia/2022/11/23/copa-do-mundo-plataforma-interativa-feita-por-estatisticos-preve-resultados-de-jogos-veja.ghtml?utm_source=whatsapp&utm_medium=share-bar-mo'>noticia - Copa do Mundo: plataforma interativa feita por estatísticos prevê resultados de todos os jogos</a><br>
 
-<h2>&#9917;FLAI – Inteligência Artificial e Data Science</h2>
+<br><h2>&#9917;FLAI – Inteligência Artificial e Data Science</h2>
 <hr>
-<p>Sim, este mini curso foi disponibilizado pela FLAI, abaixo o link para as videos aulas:</p>
-<a href="url">AULA 1 YOUTUBE</a><br>
+<p>Sim, este mini curso foi disponibilizado pela <a href='https://www.flai.com.br/'>FLAI</a>, abaixo o link para as videos aulas:</p>
+<a href="https://www.youtube.com/watch?v=5Q2_2GYiBwM">AULA 1 YOUTUBE</a><br>
 <a href="url">AULA 2 YOUTUBE</a><br>
-<a href="url">AULA 3 YOUTUBE</a><br><br>
+<a href="https://www.youtube.com/watch?v=7eCjyJ-8Se4&t=7s">AULA 3 YOUTUBE</a><br><br>
 
 <h2><i>&#9917;Questão 1: Como modelar a distribuição de gols das equipes em um jogo</i></h2> 
 <hr>
