@@ -57,6 +57,10 @@ f² - força da Seleção 2 <br>
 
 <p>O método de cálculo da força de cada seleção utilizará o ranking da FIFA. Convertemos os valores do ranking para um intervalo (a, 1), onde 1 é a escolha mais forte.</p>
 
+<h2>o Modelo para a copa do mundo</h2>
+<p>Com a modelagem o grande ganhador da COPA do Qatar de 2022 pode ser: BRASIL, BÉLGICA, ARGENTINA, FRANÇA ou INGLATERRA. 
+
+<img src="image\copa do mundo.PNG">
 
 
 
