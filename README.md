@@ -1,66 +1,114 @@
+# ⚽🌍 FLAI_Data-Science_COPA_DO_MUNDO_2022 🌍⚽
 
-<h1>&#9917;&#127758;FLAI_Data-Science_COPA_DO_MUNDO_2022 &#127758;&#9917;</h1>
- 
-<h2>&#9917;Previsão de Partidas</h2>
-<hr>
-<div style='text-align:justify'>
-<p>Modelar não é representar a realidade, mas transmitir uma equação útil, então tentamos quantificar as frações possíveis.
-<p>É interessante quanta variação existe no futebol, e essa variação coloca os problemas do jogo nas minúcias. Se pudéssemos repetir o jogo algumas vezes, poderíamos ter vários jogos de diferentes valores.</p>
-<p>Quando se trata de futebol, estamos quantificando todas as incertezas possíveis.</p>
-<a href='https://g1.globo.com/sp/sao-carlos-regiao/noticia/2022/11/23/copa-do-mundo-plataforma-interativa-feita-por-estatisticos-preve-resultados-de-jogos-veja.ghtml?utm_source=whatsapp&utm_medium=share-bar-mo'>noticia - Copa do Mundo: plataforma interativa feita por estatísticos prevê resultados de todos os jogos</a><br>
+<div align="center">
 
-<br><h2>&#9917;FLAI – Inteligência Artificial e Data Science</h2>
-<hr>
-<p>Sim, este mini curso foi disponibilizado pela <a href='https://www.flai.com.br/'>FLAI</a>, abaixo o link para as videos aulas:</p>
-<a href="https://www.youtube.com/watch?v=5Q2_2GYiBwM">AULA 1 YOUTUBE</a><br>
-<a href="url">AULA 2 YOUTUBE</a><br>
-<a href="https://www.youtube.com/watch?v=7eCjyJ-8Se4&t=7s">AULA 3 YOUTUBE</a><br><br>
+[![Licença: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python](https://img.shields.io/badge/python-v3.9+-blue.svg)
+[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/otavioaugust1/FLAI_Data-Science_COPA_DO_MUNDO_2022)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)
 
-<h2><i>&#9917;Questão 1: Como modelar a distribuição de gols das equipes em um jogo</i></h2> 
-<hr>
-<h3>Distribuição Poisson:</h3>
+</div>
 
-<p>Ajuda quando tentamos quantificar a probabilidade de marcar. É uma boa escolha para dados de futebol para contagem de gols em partidas, o que foi verificado por alguns pesquisadores.</p>
+---
 
-<img src="image\equacao.png" width="400px;">
+## 📖 Sobre o Projeto
 
-Onde:<br>
-k - número de ocorrências;<br>
-e - número de Euler.<br>
+Este projeto utiliza técnicas de **Data Science** e **Inteligência Artificial** para prever resultados de partidas da Copa do Mundo de 2022. A modelagem é baseada na distribuição de Poisson, que ajuda a quantificar a probabilidade de gols em partidas de futebol.
 
-<p>Com isso, podemos calcular a probabilidade de cada gol multiplicando a probabilidade de um determinado time marcar tantos gols pela probabilidade de outro time marcar tantos gols.</p>
+> "Modelar não é representar a realidade, mas transmitir uma equação útil."
 
-<p>&#9917;A probabilidade de empate em uma partida é a soma das probabilidades de empate em cada resultado.</p>
-<p>&#9917;A probabilidade de vitória da Argentina é a soma das probabilidades de suas combinações de pontos vencedores.</p>
-<p>&#9917;A probabilidade do Vitória do Brasil é a soma das probabilidades de todas as combinações em que ele ganha.</p>
-<p>Portanto, em um jogo, a distribuição de gols para o time 1 e time 2 é S¹ ~ Poisson(m1) s² ~ Poisson(m2) respectivamente onde:</p>
-m - Alvo médio.<br>
-Em que S¹ e S² são independentes.<br><br>
+### 🔗 Referências
+- [Notícia: Plataforma interativa prevê resultados de jogos](https://g1.globo.com/sp/sao-carlos-regiao/noticia/2022/11/23/copa-do-mundo-plataforma-interativa-feita-por-estatisticos-preve-resultados-de-jogos-veja.ghtml?utm_source=whatsapp&utm_medium=share-bar-mo)
+- [FLAI - Inteligência Artificial e Data Science](https://www.flai.com.br/)
 
-<h2><i>&#9917;Questão 2: Como calculo o número médio de golos por equipa por jogo</i></h2>
-<hr>
-<p>Partindo da média histórica de gols marcados na Copa do Mundo e considerando alguns fatores, podemos pensar que a média de gols esperados nesta Copa é de 2,75.</p>
-m = m¹ + m²<br>
-m = 2,75<br>
+---
 
-<p>Agora é só descobrir para cada equipe, quanto resta de cada equipe.</p>
-<p>Para isso usaremos o fator de força de cada equipe</p>
+## 🧠 Questões Abordadas
 
+### 1️⃣ Como modelar a distribuição de gols das equipes em um jogo?
 
-m¹ = m . f¹ / (f¹ + f²) <br>
-m² = m - m² <br>
+A **Distribuição de Poisson** é utilizada para calcular a probabilidade de gols em uma partida. A fórmula é:
 
-<p>Onde:</p>
-f¹ - força da Seleção 1 <br>
-f² - força da Seleção 2 <br>
+$$
+P(k; \lambda) = \frac{e^{-\lambda} \lambda^k}{k!}
+$$
 
+Onde:
+- \(k\): número de gols
+- \(\lambda\): média de gols esperados
+- \(e\): número de Euler
 
-<p>O método de cálculo da força de cada seleção utilizará o ranking da FIFA. Convertemos os valores do ranking para um intervalo (a, 1), onde 1 é a escolha mais forte.</p>
+### 2️⃣ Como calcular o número médio de gols por equipe por jogo?
 
-<h2>o Modelo para a copa do mundo</h2>
-<p>Com a modelagem o grande ganhador da COPA do Qatar de 2022 pode ser: BRASIL, BÉLGICA, ARGENTINA, FRANÇA ou INGLATERRA. 
+A média histórica de gols esperados em uma Copa do Mundo é de **2,75 gols por jogo**. Para calcular a média de gols de cada equipe:
 
-<img src="image\copa do mundo.PNG">
+\[
+m_1 = m \cdot \frac{f_1}{f_1 + f_2}
+\]
+
+\[
+m_2 = m - m_1
+\]
+
+Onde:
+- \(f_1\): força da equipe 1
+- \(f_2\): força da equipe 2
+
+A força de cada equipe é baseada no ranking da FIFA, ajustado para um intervalo entre 0 e 1.
+
+---
+
+## 🏗️ Estrutura do Projeto
+
+```
+FLAI_Data-Science_COPA_DO_MUNDO_2022/
+├── dados/                # Dados utilizados no projeto
+├── image/                # Imagens e gráficos
+├── partida.py            # Código principal para modelagem
+├── Data_Science_na_Copa_do_Mundo_Qatar_2022.ipynb  # Notebook com análises
+├── LICENSE               # Licença do projeto
+├── README.md             # Documentação
+└── requirements.txt      # Dependências do projeto
+```
+
+---
+
+## 🚀 Como Começar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/otavioaugust1/FLAI_Data-Science_COPA_DO_MUNDO_2022.git
+   ```
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Explore o notebook:
+   ```bash
+   jupyter notebook Data_Science_na_Copa_do_Mundo_Qatar_2022.ipynb
+   ```
+
+---
+
+## 🎥 Aulas Disponíveis
+
+- [AULA 1 - YouTube](https://www.youtube.com/watch?v=5Q2_2GYiBwM)
+- [AULA 2 - YouTube](https://www.youtube.com/watch?v=7eCjyJ-8Se4&t=7s)
+
+---
+
+## 👨‍💻 Contribuidor
+
+- **Nome:** Otavio Augusto
+- **Email:** otavioaugust@gmail.com
+- **GitHub:** [@otavioaugust1](https://github.com/otavioaugust1)
+- **Versão:** 0.2.1
+
+---
+
+## 📜 Licença
+
+Este projeto está licenciado sob a licença [MIT](LICENSE). Sinta-se à vontade para usar, modificar e compartilhar este projeto, desde que mantenha os créditos ao autor original.
 
 
 
